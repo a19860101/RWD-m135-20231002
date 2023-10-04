@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* 
             選取器
@@ -11,25 +12,35 @@
             2. 類別class
             3. id （不可重複，具有唯一性）
         */
+        h1 {
+            color: red;
+        }
         .abc {
             color: greenyellow;
         }
+
         #xyz {
             color: orange;
         }
+        /* 
+            影響元素愈少，權重愈重，愈優先套用
+            物以稀為貴
+            id > class > tag
+            當權重相同時，則判斷寫的順序，後寫優先
+        */
     </style>
 </head>
 <body>
-    <h1>title</h1>
-    <p class="abc">
+    <h1 class="abc" id="xyz">title</h1>
+    <p class="abc xyz">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis totam vitae magni repellendus tempore, hic explicabo voluptas itaque porro maiores id, ipsum iure, possimus dolores rem esse nobis doloribus.
     </p>
     <ul>
         <li>list</li>
-        <li id="xyz">list</li>
+        <li >list</li>
         <li>list</li>
         <li>list</li>
     </ul>
-    <a href="#" class="abc">link</a>
+    <a href="#">link</a>
 </body>
 </html>
