@@ -21,16 +21,51 @@
             vertical-align: middle;
             /* baseline, top, middle, bottom */
         }
-        /* 虛擬類別 */
-        tr:nth-of-type(odd){
+        /* 虛擬類別 nth-of-type */
+        /* tr:nth-of-type(odd){
             background-color: #aa00ff;
         }
         tr:nth-of-type(even){
             background-color: #fa0;
+        } */
+
+        /* tr:first-of-type{
+            background-color: #f00;
         }
-    </style>
+        tr:last-of-type{
+            background-color: #00fbff;
+        } */
+
+        /* nth-child */
+
+        /* tr:nth-child(odd){
+            background-color: #f00;
+        }
+        tr:nth-child(even){
+            background-color: #ffa9a9;
+        } */
+        /* tr:first-child{
+            background-color: #098;
+        }
+        tr:last-child{
+            background-color: #fa0;
+        } */
+
+        h2:nth-of-type(4){
+            color: #f00;
+        }
+        h2:nth-child(4){
+            color: #69fff0;
+        }
+</style>
 </head>
 <body>
+    <h2>title 1</h2>
+    <h2>title 2</h2>
+    <div>teset</div>
+    <h2>title 3</h2>
+    <h2>title 4</h2>
+    <h2>title 5</h2>
     <table>
         <tr>
             <td>內容</td>
