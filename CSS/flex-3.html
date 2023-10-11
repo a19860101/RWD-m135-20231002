@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: min(1200px,100%);
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .box {
+            padding: 15px;
+            /* width: 25%; */
+            /* flex-basis: 400px; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0; */
+            flex: 1 0 400px;
+            /* flex:[grow shrink basis] */
+        }
+        .box:nth-of-type(1){
+            /* flex-grow: 1; */
+            background-color: #fa0;
+        }
+        .box:nth-of-type(2){
+            /* flex-grow: 3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
+            </p>
+        </div>
+        <!-- <div class="box">
+            <h2>title1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>
