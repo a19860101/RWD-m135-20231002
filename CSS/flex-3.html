@@ -21,15 +21,23 @@
             /* flex-basis: 400px; */
             /* flex-grow: 1; */
             /* flex-shrink: 0; */
-            flex: 1 0 400px;
+            flex: 1 0 300px;
             /* flex:[grow shrink basis] */
         }
         .box:nth-of-type(1){
             /* flex-grow: 1; */
             background-color: #fa0;
+            order:4;
         }
         .box:nth-of-type(2){
             /* flex-grow: 3; */
+            order: 1;
+        }
+        .box:nth-of-type(3){
+            /* order: 3; */
+        }
+        .box:nth-of-type(4){
+            order: 2;
         }
     </style>
 </head>
@@ -42,23 +50,23 @@
             </p>
         </div>
         <div class="box">
-            <h2>title1</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
-            </p>
-        </div>
-        <!-- <div class="box">
-            <h2>title1</h2>
+            <h2>title2</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
             </p>
         </div>
         <div class="box">
-            <h2>title1</h2>
+            <h2>title3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
             </p>
-        </div> -->
+        </div>
+        <div class="box">
+            <h2>title4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque repudiandae neque, dolore nemo accusantium? Nostrum voluptatum quaerat ea consequuntur.
+            </p>
+        </div>
     </div>
 </body>
 </html>
