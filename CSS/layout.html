@@ -38,6 +38,7 @@
             padding-inline: 15px;
 
             position: fixed;
+            z-index: 999;
         }
         nav a {
             color: #eee;
@@ -57,6 +58,23 @@
             background-color: #888;
 
             aspect-ratio: 2 / 1;
+
+            position: relative;
+           
+        }
+        .header-title {
+            position: absolute;
+            background-color: rgb(255 255 255 / .2);
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50%;
+            height: fit-content;
+            text-align: center;
         }
         header img {
             height: 100%;
@@ -178,6 +196,12 @@
     </nav>
     <header>
         <img src="https://picsum.photos/id/63/1600/900" alt="">
+        <div class="header-title">
+            <h1>HELLO</h1>
+            <p>
+                是的執行時間就業總部可惜，有。
+            </p>
+        </div>
     </header>
     <section id="about">
         <div class="container">
