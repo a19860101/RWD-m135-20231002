@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 800px;
+            height: 800px;
+            background-color: #aaa;
+
+            position: relative;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #e04;
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            z-index: 999;
+        }
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: #00baee;
+
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            z-index: 1000;
+        }
+        /* 
+            position 定位
+            1. static 靜態
+            2. relative 相對
+            3. absolute 絕對
+            4. fixed 固定
+            5. sticky 黏性
+        */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box"></div>
+        <div class="box2"></div>
+    </header>
+</body>
+</html>
