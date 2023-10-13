@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 2000px;
+            background-image: linear-gradient(#F6FDC3,#CDFAD5);
+        }
         header {
             width: 800px;
             height: 800px;
             background-color: #aaa;
 
-            position: relative;
+            /* position: relative; */
+            position: sticky;
+            top: 0  ;
+
         }
         .box {
             width: 150px;
@@ -32,6 +39,15 @@
             right: 50px;
             z-index: 1000;
         }
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            position: fixed;
+            right: 50px;
+            bottom:50px;
+            border-radius: 50%;
+        }
         /* 
             position 定位
             1. static 靜態
@@ -43,9 +59,13 @@
     </style>
 </head>
 <body>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptatem totam odit adipisci saepe cum repudiandae fugiat sint et corrupti fuga, eveniet quaerat. Debitis nostrum veritatis dicta, atque neque tenetur earum quae inventore aliquam, magni impedit doloremque nam recusandae et? Consequuntur, accusamus tempora fuga sit reiciendis ullam et rerum, veniam quos aliquam aspernatur, ducimus facilis! Blanditiis eligendi assumenda sapiente perspiciatis inventore sit quam totam. Esse dignissimos facilis odio, odit architecto libero perspiciatis aut. Animi ab, quos minima, unde, tempore aliquid dolor modi quibusdam est deserunt recusandae. Autem, aliquid, quo dolorum fuga at maxime quos ea ullam labore iste, cum magnam.
+    </div>
     <header>
         <div class="box"></div>
         <div class="box2"></div>
     </header>
+    <div class="fixed"></div>
 </body>
 </html>
