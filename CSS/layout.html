@@ -6,11 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;800&family=Roboto:wght@100;400;900&display=swap');
         * {
             box-sizing: border-box;
         }
         body {
             margin: 0;
+            font-family: 'Roboto','Noto Sans TC';
         }
         img {
             width: 100%;
@@ -58,13 +60,23 @@
             flex-wrap: wrap;
             margin-inline: auto;
         }
+        .about-title {
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 3px;
+            color: #002a10;
+        }
         .about-col {
             flex: 1 0 300px;
             padding: 15px 50px;
             text-align: center;
         }
         .about-col i {
-            color: #88ff9e;
+            color: #008834;
+        }
+        .about-col p {
+            color: #202020;
         }
     </style>
 </head>
@@ -72,7 +84,7 @@
     <nav>
         <a href="#" class="nav-logo">LOGO</a>
         <div class="nav-menu">
-            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">關於</a>
             <a href="#" class="nav-link">Link</a>
             <a href="#" class="nav-link">Link</a>
             <a href="#" class="nav-link">Link</a>
@@ -83,6 +95,9 @@
     </header>
     <section id="about">
         <div class="container">
+            <div class="about-title">
+                <h2>ABOUT</h2>
+            </div>
             <div class="about-col">
                 <div>
                     <i class="fa-solid fa-cloud fa-5x"></i>
