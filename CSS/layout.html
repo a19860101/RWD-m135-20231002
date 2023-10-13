@@ -9,12 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;800&family=Roboto:wght@100;400;900&display=swap');
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         html {
             scroll-behavior: smooth;
         }
         body {
-            margin: 0;
             font-family: 'Roboto','Noto Sans TC';
         }
         img {
@@ -75,6 +76,10 @@
             width: 50%;
             height: fit-content;
             text-align: center;
+            padding: 30px;
+        }
+        .header-title h1{
+            margin-bottom:15px;
         }
         header img {
             height: 100%;
@@ -93,11 +98,15 @@
             letter-spacing: 3px;
             color: rgb(0 0 0 /.8);
             text-transform: uppercase;
+            margin-bottom: 30px;
         }
         .about-col {
             flex: 1 0 300px;
             padding: 15px 50px;
             text-align: center;
+        }
+        .about-col h3 {
+            margin-block: 25px;
         }
         .about-col i {
             color: #008834;
@@ -116,7 +125,8 @@
             font-size: 32px;
             letter-spacing: 3px;
             color: rgb(0 0 0 /.8);
-            text-transform: uppercase;   
+            text-transform: uppercase; 
+            margin-bottom: 30px;  
         }
         .post-col {
             flex:1 0 300px;
@@ -133,6 +143,12 @@
             text-transform: capitalize;
             padding: 10px;
             background-color: #fff;
+        }
+        .post-body h3 {
+            margin-block: 15px;
+        }
+        .post-body p {
+            margin-bottom:20px;
         }
         .post-footer {
             padding: 10px;
@@ -157,6 +173,7 @@
             letter-spacing: 3px;
             color: rgb(0 0 0 /.8);
             text-transform: uppercase;   
+            margin-bottom: 30px;
         }
         /* footer */
         footer {
