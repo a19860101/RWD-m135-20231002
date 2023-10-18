@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            /* max-width: 1200px; */
+            width: min(1200px,90%);
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            flex:1 0 100%;
+            padding: 10px;
+        }
+        @media(min-width: 600px){
+            .col {
+                flex:1 0 50%
+            } 
+        }
+        @media(min-width: 1200px){
+            .col {
+                flex:1 0 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam quo voluptas veniam aliquid praesentium a at tenetur incidunt in consectetur hic, nobis suscipit soluta. Incidunt cupiditate quod consectetur tempora!
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam quo voluptas veniam aliquid praesentium a at tenetur incidunt in consectetur hic, nobis suscipit soluta. Incidunt cupiditate quod consectetur tempora!
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam quo voluptas veniam aliquid praesentium a at tenetur incidunt in consectetur hic, nobis suscipit soluta. Incidunt cupiditate quod consectetur tempora!
+            </p>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quisquam quo voluptas veniam aliquid praesentium a at tenetur incidunt in consectetur hic, nobis suscipit soluta. Incidunt cupiditate quod consectetur tempora!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
