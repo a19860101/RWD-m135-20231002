@@ -96,8 +96,8 @@ header img {
 .about-title {
     width: 100%;
     text-align: center;
-    font-size: 32px;
-    letter-spacing: 3px;
+    font-size: clamp(24px, 4vw, 32px);
+    letter-spacing: 1px;
     color: rgb(0 0 0 /.8);
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -131,8 +131,9 @@ header img {
     margin-bottom: 30px;  
 }
 .post-col {
-    flex:1 0 300px;
+    flex:0 0 70%;
     padding:15px;
+    margin-inline: auto;
 }
 
 .post-card {
@@ -229,5 +230,11 @@ footer {
 @media(min-width:1200px){
     header {
         aspect-ratio: 2 / 1;
+    }
+    .about-title {
+        letter-spacing: 3px;
+    }
+    .post-col {
+        flex: 0 0 25%;
     }
 }
