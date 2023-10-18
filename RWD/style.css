@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;800&family=Roboto:wght@100;400;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto','Noto Sans TC';
+}
+img {
+    width: 100%;
+    display: block;
+}
+.container {
+    width: min(1200px, 100%);
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+}
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(0 0 0 / .7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding-inline: 15px;
+
+    position: fixed;
+    z-index: 999;
+}
+nav a {
+    color: #eee;
+    text-decoration: none;
+}
+.nav-menu {
+    display: flex;
+    /* gap:15px; */
+    margin-left: auto;
+}
+.nav-link {
+    padding: 8px 20px;
+    border-radius:3px;
+    transition: 150ms;
+}
+.nav-link:hover {
+    background-color: #fff89c;
+    color: #000;
+    
+}
+header {
+    width: 100%;
+    /* min-height: 400px; */
+    max-height: 800px;
+    /* overflow: hidden; */
+    background-color: #888;
+
+    aspect-ratio: 4 / 3;
+
+    position: relative;
+    
+}
+.header-title {
+    position: absolute;
+    background-color: rgb(255 255 255 / .2);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    padding: 30px;
+}
+.header-title h1{
+    font-size: clamp(2rem, 5vw, 8rem);
+    margin-bottom:15px;
+}
+header img {
+    height: 100%;
+    object-fit: cover;
+}
+/* about */
+#about {
+    background-color: #CDFAD5;
+    padding-block: 150px;
+}
+
+.about-title {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: rgb(0 0 0 /.8);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.about-col {
+    flex: 1 0 300px;
+    padding: 15px 50px;
+    text-align: center;
+}
+.about-col h3 {
+    margin-block: 25px;
+}
+.about-col i {
+    color: #008834;
+}
+.about-col p {
+    color: #202020;
+}
+/* post */
+#post {
+    padding-block: 150px;
+    background-color: #fcffe9;
+}
+.post-title {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: rgb(0 0 0 /.8);
+    text-transform: uppercase; 
+    margin-bottom: 30px;  
+}
+.post-col {
+    flex:1 0 300px;
+    padding:15px;
+}
+
+.post-card {
+    /* border:1px solid #c9c9c9; */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 300ms;
+}
+.post-card:hover {
+    box-shadow: 0px 3px 10px 3px rgb(0 0 0 / .2);
+    /* x y 模糊 擴散 顏色 */
+}
+.post-body {
+    text-transform: capitalize;
+    padding: 10px;
+    background-color: #fff;
+}
+.post-body h3 {
+    margin-block: 15px;
+}
+.post-body p {
+    margin-bottom:20px;
+}
+.post-footer {
+    padding: 10px;
+    background-color: #dcdcdc;
+    text-align : right;
+}
+.post-footer a {
+    color: #000000;
+    transition: 150ms;
+}
+.post-footer a:hover {
+    color: #5289ff;
+}
+/* folio */
+#folio {
+    padding-block:150px;
+    background-color: #CDFAD5;
+}
+.folio-item {
+    flex:1 0 200px;
+    position: relative;
+}
+.folio-item a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 /.5);
+    transition: 300ms;
+    backdrop-filter: blur(3px);
+}
+.folio-item a:hover::after {
+    background-color: rgb(0 0 0 / 0);
+    backdrop-filter: blur(0);
+}
+.folio-title {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: rgb(0 0 0 /.8);
+    text-transform: uppercase;   
+    margin-bottom: 30px;
+}
+/* footer */
+footer {
+    background-color: #222;
+    color: rgb(255 255 255 / .8);
+    padding-block: 20px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.gotop {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+@media(min-width:1200px){
+    header {
+        aspect-ratio: 2 / 1;
+    }
+}
