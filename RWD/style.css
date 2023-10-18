@@ -93,7 +93,7 @@ header img {
     padding-block: 150px;
 }
 
-.about-title {
+.section-title {
     width: 100%;
     text-align: center;
     font-size: clamp(24px, 4vw, 32px);
@@ -120,15 +120,6 @@ header img {
 #post {
     padding-block: 150px;
     background-color: #fcffe9;
-}
-.post-title {
-    width: 100%;
-    text-align: center;
-    font-size: 32px;
-    letter-spacing: 3px;
-    color: rgb(0 0 0 /.8);
-    text-transform: uppercase; 
-    margin-bottom: 30px;  
 }
 .post-col {
     flex:0 0 70%;
@@ -193,15 +184,6 @@ header img {
     background-color: rgb(0 0 0 / 0);
     backdrop-filter: blur(0);
 }
-.folio-title {
-    width: 100%;
-    text-align: center;
-    font-size: 32px;
-    letter-spacing: 3px;
-    color: rgb(0 0 0 /.8);
-    text-transform: uppercase;   
-    margin-bottom: 30px;
-}
 /* footer */
 footer {
     background-color: #222;
@@ -231,7 +213,7 @@ footer {
     header {
         aspect-ratio: 2 / 1;
     }
-    .about-title {
+    .section-title {
         letter-spacing: 3px;
     }
     .post-col {
