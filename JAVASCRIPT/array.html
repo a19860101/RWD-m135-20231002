@@ -11,13 +11,23 @@
         // a[0] = 'apple';
         // a[1] = 'banana';
         // a[2] = 'cat';
-        let a = ['apple','banana','cat'];
+        let a = ['apple','banana','cat','dog'];
         console.log(a);
         // console.log(a[0]);
         // console.log(a[1]);
         // console.log(a[2]);
-        for(let i=0;i<3;i++){
+        for(let i=0;i<a.length;i++){
             console.log(a[i]);
+        }
+
+        // for ... in (迭代索引值)
+        for(let item in a){
+            console.log(a[item])
+        }
+
+        // for...of(迭代內容)
+        for(let item of a){
+            console.log(item);
         }
     </script>
 </body>
