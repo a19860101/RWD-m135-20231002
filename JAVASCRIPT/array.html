@@ -11,7 +11,7 @@
         // a[0] = 'apple';
         // a[1] = 'banana';
         // a[2] = 'cat';
-        let a = ['apple','banana','cat','dog'];
+        let a = ['apple','banana','cat','dog','hello','test','html','css','javascript'];
         console.log(a);
         // console.log(a[0]);
         // console.log(a[1]);
@@ -35,24 +35,30 @@
         console.log(a.length);
 
         // push() 在陣列後方新增項目
-        a.push('test');
+        // a.push('test');
 
         // pop() 移除陣列最後一個項目
-        a.pop();
+        // a.pop();
         // a.pop();
 
         // unshift() 在陣列前方新增項目
-        a.unshift('test');
+        // a.unshift('test');
 
         // shift() 移除陣列第一個項目
-        a.shift();
+        // a.shift();
         // a.shift();
 
         // splice() 拼接
         // a.splice(2,0,'貓','狗','哈囉');
-        a.splice(3,1);
+        // a.splice(3,1);
 
         console.log(a);
+
+        // slice() 切片
+        let a_slice = a.slice(2,5);
+        let a_slice_2 = a.slice(1,6);
+        console.log(a_slice_2)
+
 
     </script>
 </body>
