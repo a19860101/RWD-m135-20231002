@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .active {
+            background-color: #ff7575;
+            color: #1bf5fd;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="title">title</h1>
+        <h1 id="title">title 123</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati officia illum ea veniam suscipit eos, minus cupiditate amet cum qui iusto omnis? Aliquam provident esse modi error, quisquam expedita?
         </p>
@@ -34,7 +40,14 @@
         let title = document.querySelector('#title');
         let menu = document.querySelector('.menu');
         let list = document.querySelectorAll('.list');
-        console.log(list)
+
+        // title.style.color = 'red';
+        // title.style.backgroundColor = 'gray';
+        // title.classList.add('active');
+        // title.className = 'active';
+
+        console.log(title.textContent);
+        title.textContent = '123123'
     </script>
 </body>
 </html>
