@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function scope
+
+        function test(){
+            var a = 10;
+            console.log(a);
+        }
+        test();
+
+        // block scope
+        let i = 10;
+        if(i>0){
+            const b = 19;
+            console.log(b)
+        }
+        const b= 33;
+        console.log(b)
+
+        //const
+        // const x = ['apple','banana'];
+        // x.push('cat');
+
+        // const x = {
+        //     name: 'x'
+        // }
+        // x.mail = 'xasdf@gmail.com';
+
+        const x = function(){
+            return 'test';
+        }
+        console.log(x());
+    </script>
+</body>
+</html>
