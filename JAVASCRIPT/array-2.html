@@ -55,7 +55,19 @@
         let bubbleIndex = drinks.findIndex(function(drink){
             return drink.name == '綠茶';
         })
-        console.log(bubbleIndex);
+        // console.log(bubbleIndex);
+
+        // some
+        let drink_some = drinks.some(function(d){
+            return d.price > 50;
+        })
+        console.log(drink_some);
+
+        // every
+        let drink_every = drinks.every(function(d){
+            return d.price > 30;
+        })
+        console.log(drink_every)
 
     </script>
     
