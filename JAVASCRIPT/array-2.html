@@ -44,7 +44,18 @@
         let blackTea = drinks.filter(function(drink){
             return drink.name == '紅茶';
         })
-        console.log(blackTea);
+        // console.log(blackTea);
+
+        // find
+        let bubble = drinks.find(function(drink){
+            return drink.name == '珍珠奶茶';
+        })
+
+        // findIndex
+        let bubbleIndex = drinks.findIndex(function(drink){
+            return drink.name == '綠茶';
+        })
+        console.log(bubbleIndex);
 
     </script>
     
