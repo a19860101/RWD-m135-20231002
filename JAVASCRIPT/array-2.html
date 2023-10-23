@@ -27,15 +27,24 @@
             },
         ];
         // forEach
-        drinks.forEach(function(item,idx){
-            console.log(item,idx)
-        });
+        // drinks.forEach(function(item,idx){
+        //     console.log(item,idx)
+        // });
 
         // map 
         let drink_name = drinks.map(function(drink){
             return drink.name;
         })
-        console.log(drink_name);
+        // console.log(drink_name);
+
+        // filter
+        let drink_expensive = drinks.filter(function(drink){
+            return drink.price > 20;
+        });
+        let blackTea = drinks.filter(function(drink){
+            return drink.name == '紅茶';
+        })
+        console.log(blackTea);
 
     </script>
     
