@@ -76,11 +76,12 @@
         //     console.log(a,b)
         // });
 
-        let total = drinks.map(function(d){
-            return d.price;
-        }).reduce(function(a,b){
-            return Number(a)+Number(b);
-        })
+        // let total = drinks.map(function(d){
+        //     return d.price;
+        // }).reduce(function(a,b){
+        //     return Number(a)+Number(b);
+        // })
+        let total = drinks.map(d => d.price).reduce((a,b)=>Number(a)+Number(b));
         console.log(total);
 
     </script>

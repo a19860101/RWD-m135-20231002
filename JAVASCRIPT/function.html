@@ -23,13 +23,27 @@
         // }
 
         // 函式表達式 function expression
-        let test = function(){
-            return 'test';
-        }
-        let dollar = function(price,exc){
-            return price * exc;
-        }
-        console.log(dollar(100,32));
+        // let test = function(){
+        //     return 'test';
+        // }
+        // let dollar = function(price,exc){
+        //     return price * exc;
+        // }
+
+        // 箭頭函式 arrow function
+
+        // let test = () => {
+        //     return 'test';
+        // }
+        // let test = a => {
+        //     return a;
+        // }
+        // let test = a => a;
+        let test = (a,b) => a+b;
+
+        // 箭頭函式跟一般函式只有this不同，其他皆相同
+        
+        console.log(test(12,23));
     </script>
 </body>
 </html>
