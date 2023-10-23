@@ -69,6 +69,20 @@
         })
         console.log(drink_every)
 
+        // reduce
+        // let price = [20,30,40,50];
+        // let total = price.reduce(function(a,b){
+        //     return a + b;
+        //     console.log(a,b)
+        // });
+
+        let total = drinks.map(function(d){
+            return d.price;
+        }).reduce(function(a,b){
+            return Number(a)+Number(b);
+        })
+        console.log(total);
+
     </script>
     
 </body>
