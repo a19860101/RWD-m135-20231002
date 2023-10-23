@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati officia illum ea veniam suscipit eos, minus cupiditate amet cum qui iusto omnis? Aliquam provident esse modi error, quisquam expedita?
+        </p>
+        <ul class="menu">
+            <li class="list">list 1</li>
+            <li class="list">list 2</li>
+            <li class="list">list 3</li>
+            <li class="list">list 4</li>
+            <li class="list">list 5</li>
+        </ul>
+    </div>
+    <script>
+        // dom document object model 文件物件模型
+        
+        // getElement
+        let title = document.getElementById('title');
+        let menu = document.getElementsByClassName('menu')[0];
+        let list = document.getElementsByClassName('list');
+        let li = document.getElementsByTagName('li');
+        let p = document.getElementsByTagName('p');
+
+        console.log(p)
+    </script>
+</body>
+</html>
