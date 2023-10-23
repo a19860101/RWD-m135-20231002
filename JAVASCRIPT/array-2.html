@@ -8,17 +8,34 @@
 <body>
     <script>
         let a = ['apple','banana','cat','dog','hello','test','html','css','javascript'];
-
+        let drinks = [
+            {
+                name: '紅茶',
+                price: '20'
+            },
+            {
+                name: '綠茶',
+                price: '20'
+            },
+            {
+                name: '奶茶',
+                price: '30'
+            },
+            {
+                name: '珍珠奶茶',
+                price: '50'
+            },
+        ];
         // forEach
-        // a.forEach(function(item,idx){
-        //     console.log(item,idx)
-        // });
+        drinks.forEach(function(item,idx){
+            console.log(item,idx)
+        });
 
         // map 
-        let a_map = a.map(function(item,idx){
-            return item = idx + '-' + item;
+        let drink_name = drinks.map(function(drink){
+            return drink.name;
         })
-        console.log(a_map);
+        console.log(drink_name);
 
     </script>
     
