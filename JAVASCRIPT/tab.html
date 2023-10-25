@@ -33,10 +33,15 @@
             padding: 15px;
             background-color: #FFFADD;
             position: absolute;
-            display: none;
+            /* display: none; */
+            opacity: 0;
+            visibility: hidden;
+            transition: 600ms; 
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
