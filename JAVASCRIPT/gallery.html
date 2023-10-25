@@ -29,8 +29,19 @@
             <img src="https://picsum.photos/id/41/600" alt="" class="thumb">
             <img src="https://picsum.photos/id/42/600" alt="" class="thumb">
             <img src="https://picsum.photos/id/43/600" alt="" class="thumb">
-            <img src="https://picsum.photos/id/44/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/93/600" alt="" class="thumb">
         </div>
     </div>
+    <script>
+        let thumbs = document.querySelectorAll('.thumb');
+        for(let thumb of thumbs){
+            thumb.onclick = function(){
+                // let newImg = this.src;
+                let newImg= this.getAttribute('src');
+                console.log(newImg)
+                document.querySelector('.main').setAttribute('src',newImg);
+            }
+        }
+    </script>
 </body>
 </html>
