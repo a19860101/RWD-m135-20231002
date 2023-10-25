@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text">
+    <input type="text" id="input" onkeyup="search()">
 
     <ul>
         <li class="list">Google代碼管理工具(GTM)工作現場實戰指引</li>
@@ -20,10 +20,12 @@
         <li class="list">Vue.js 3 前端測試入門從這裡開始：透過 Vitest + Vue Test</li>
     </ul>
     <script>
+        function search(){
+            let input = document.querySelector('#input').value;
+            console.log(input)
+        }
         let list = document.querySelectorAll('.list');
-        console.log(list);
         for(let item of list){
-            console.log(item.textContent);
         }
     </script>
 </body>
