@@ -22,11 +22,19 @@
     <script>
         function search(){
             let input = document.querySelector('#input').value;
-            console.log(input)
+            let list = document.querySelectorAll('.list');
+            for(let item of list){
+                if(item.textContent.indexOf(input) > -1){
+                    item.style.display = '';
+                }else{
+                    item.style.display = 'none';
+                }
+            }
         }
-        let list = document.querySelectorAll('.list');
-        for(let item of list){
-        }
+
+        let str = 'Google代碼管理工具(GTM)工作現場實戰指引';
+        console.log(str.indexOf('Apple'));
+      
     </script>
 </body>
 </html>
