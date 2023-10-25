@@ -9,6 +9,9 @@
             width: 600px;
 
         }
+        .container {
+            transition: 300ms;
+        }
         .active {
             color: #f00;
             background-color: #ccc;
@@ -19,6 +22,7 @@
 <body>
     <button class="add">add</button>
     <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
 
     <div class="container">
         <h1>title</h1>
@@ -29,12 +33,16 @@
     <script>
         let add = document.querySelector('.add');
         let remove = document.querySelector('.remove');
+        let toggle = document.querySelector('.toggle');
         let container = document.querySelector('.container');
         add.onclick = function(){
             container.classList.add('active');
         }
         remove.onclick = function(){
             container.classList.remove('active');
+        }
+        toggle.onclick = function(){
+            container.classList.toggle('active');
         }
     </script>
 </body>
