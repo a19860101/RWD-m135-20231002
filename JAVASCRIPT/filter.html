@@ -24,13 +24,24 @@
             let input = document.querySelector('#input').value;
             let list = document.querySelectorAll('.list');
             for(let item of list){
-                if(item.textContent.indexOf(input) > -1){
+                if(item.textContent.toUpperCase().indexOf(input.toUpperCase()) > -1){
                     item.style.display = '';
                 }else{
                     item.style.display = 'none';
                 }
             }
         }
+        // function search(){
+        //     let input = document.querySelector('#input').value;
+        //     let list = document.querySelectorAll('.list');
+        //     for(let item of list){
+        //         if(item.textContent.indexOf(input) > -1){
+        //             item.style.display = '';
+        //         }else{
+        //             item.style.display = 'none';
+        //         }
+        //     }
+        // }
 
         let str = 'Google代碼管理工具(GTM)工作現場實戰指引';
         console.log(str.indexOf('Apple'));
