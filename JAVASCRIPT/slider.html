@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider {
+            width: 1200px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .slider-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .slider-item.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-item active">
+            <img src="https://picsum.photos/id/76/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/71/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/72/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/73/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/74/1200/600" alt="">
+        </div>
+    </div>
+</body>
+</html>
