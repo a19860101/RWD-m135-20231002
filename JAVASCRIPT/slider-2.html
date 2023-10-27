@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider {
+            width: 1200px;
+            aspect-ratio: 2 / 1;
+            margin-inline: auto;
+            position: relative;
+        }
+        .slider-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .slider-item {
+            width: 1200px;
+        }
+        .slider-nav {
+            position: absolute;
+            /* background-color: #f00; */
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .slider-nav-next,.slider-nav-prev {
+            background-color: #ffe341;
+            color: #000;
+            width: 40px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .slider-dots {
+            /* background-color: #f00; */
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            bottom: 0;
+            transform: translateY(100%);
+            gap: 10px;
+            padding-block:10px;
+        }
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #282828;
+            bottom: 0;
+            cursor: pointer;
+            transition: 600ms;
+        }
+        .slider-dot.active {
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slider-item active">
+                <img src="https://picsum.photos/id/76/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/71/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/72/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/73/1200/600" alt="">
+            </div>
+            <!-- <div class="slider-item">
+                <img src="https://picsum.photos/id/74/1200/600" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/id/79/1200/600" alt="">
+            </div> -->
+        </div>
+
+        <div class="slider-nav">
+            <a href="#" class="slider-nav-prev"><i class="fa-solid fa-chevron-left fa-lg"></i></a>
+            <a href="#" class="slider-nav-next"><i class="fa-solid fa-chevron-right fa-lg"></i></a>
+        </div>
+        <div class="slider-dots"></div>
+    </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let timeout = 3000;
+        let sliderWidth = imgs[0].clientWidth;
+        let wrapperWidth = sliderWidth * total;
+        console.log(wrapperWidth);
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+
+        let next = document.querySelector('.slider-nav-next');
+        let prev = document.querySelector('.slider-nav-prev');
+
+
+        
+    </script>
+</body>
+</html>
