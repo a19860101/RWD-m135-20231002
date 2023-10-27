@@ -84,9 +84,11 @@
 
         prev.onclick = function(){
             slider('prev');
+            resetTimer();
         }
         next.onclick = function(){
             slider();
+            resetTimer();
         }
 
         function slider(direction){
@@ -105,7 +107,11 @@
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
-        setInterval(slider,timeout);
+        let timer = setInterval(slider,timeout);
+        function resetTimer(){
+            clearInterval(timer);
+            timer = setInterval(slider, timeout);
+        }
     </script>
 </body>
 </html>
