@@ -20,6 +20,7 @@
         .slider-wrapper {
             display: flex;
             flex-wrap: wrap;
+            transition: 500ms;
         }
         .slider-item {
             width: 1200px;
@@ -111,9 +112,63 @@
 
         let next = document.querySelector('.slider-nav-next');
         let prev = document.querySelector('.slider-nav-prev');
-
-
+        prev.onclick = function(){
+            slider('prev');
+            resetTimer();
+        }
+        next.onclick = function(){
+            slider();
+            resetTimer();
+        }
+        // 輪播
+        function slider(direction){
+            if(direction == 'prev'){
+                currentIndex = currentIndex == 0 ? total : currentIndex;
+                currentIndex = (currentIndex-1) % total;
+            }else{
+                currentIndex = (currentIndex+1) % total
+            }
+            switchImage();
+            switchDot();
+        }
+        // 計時器
+        let timer = setInterval(slider,timeout);
+        // 重新計時
+        function resetTimer(){
+            clearInterval(timer);
+            timer = setInterval(slider, timeout);
+        }
         
+        //切換圖片
+        function switchImage(){
+            wrapper.style.marginLeft = -(sliderWidth * currentIndex) + 'px';
+        }
+        // 建立dot
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            dot.dataset.idx = i;
+            document.querySelector('.slider-dots').append(dot);
+        }
+        // 取得所有dot
+        let dots = document.querySelectorAll('.slider-dot');
+        // 設定第一個dot的active
+        dots[0].classList.add('active');
+        // 點擊dot切換
+        for(let dot of dots){
+            dot.onclick = function(){
+                currentIndex = Number(this.dataset.idx);
+                console.log(currentIndex);
+                switchImage();
+                resetTimer();
+                switchDot()
+            }
+        }
+        // dot樣式切換
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active')
+        }
     </script>
 </body>
 </html>
