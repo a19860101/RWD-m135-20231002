@@ -67,6 +67,10 @@
             background-color: #282828;
             bottom: 0;
             cursor: pointer;
+            transition: 600ms;
+        }
+        .slider-dot.active {
+            background-color: #f00;
         }
     </style>
 </head>
@@ -114,6 +118,7 @@
             resetTimer();
         }
 
+        // 輪播
         function slider(direction){
             // if(currentIndex == total - 1){
             //     currentIndex = 0;
@@ -126,9 +131,12 @@
             }else{
                 currentIndex = (currentIndex+1) % total
             }
-            switchImage()
+            switchImage();
+            switchDot();
         }
+        // 計時器
         let timer = setInterval(slider,timeout);
+        // 重新計時
         function resetTimer(){
             clearInterval(timer);
             timer = setInterval(slider, timeout);
@@ -139,22 +147,33 @@
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
-        // dots
+        // 建立dot
         for(let i=0;i<total;i++){
             let dot = document.createElement('span');
             dot.classList.add('slider-dot');
             dot.dataset.idx = i;
             document.querySelector('.slider-dots').append(dot);
         }
+        // 取得所有dot
         let dots = document.querySelectorAll('.slider-dot');
+        // 設定第一個dot的active
+        dots[0].classList.add('active');
+        // 點擊dot切換
         for(let dot of dots){
             dot.onclick = function(){
                 currentIndex = this.dataset.idx;
                 console.log(currentIndex);
                 switchImage();
                 resetTimer();
+                switchDot()
             }
         }
+        // dot樣式切換
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active')
+        }
+        
     </script>
 </body>
 </html>
