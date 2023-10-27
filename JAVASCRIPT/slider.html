@@ -49,6 +49,25 @@
             align-items: center;
             text-decoration: none;
         }
+        .slider-dots {
+            /* background-color: #f00; */
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            bottom: 0;
+            transform: translateY(100%);
+            gap: 10px;
+            padding-block:10px;
+        }
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #282828;
+            bottom: 0;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -68,10 +87,14 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/74/1200/600" alt="">
         </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/79/1200/600" alt="">
+        </div>
         <div class="slider-nav">
             <a href="#" class="slider-nav-prev"><i class="fa-solid fa-chevron-left fa-lg"></i></a>
             <a href="#" class="slider-nav-next"><i class="fa-solid fa-chevron-right fa-lg"></i></a>
         </div>
+        <div class="slider-dots"></div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
@@ -111,6 +134,14 @@
         function resetTimer(){
             clearInterval(timer);
             timer = setInterval(slider, timeout);
+        }
+        
+        // dots
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            dot.dataset.idx = i;
+            document.querySelector('.slider-dots').append(dot);
         }
     </script>
 </body>
