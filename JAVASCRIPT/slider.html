@@ -126,9 +126,7 @@
             }else{
                 currentIndex = (currentIndex+1) % total
             }
-            console.log(currentIndex);
-            document.querySelector('.slider-item.active').classList.remove('active');
-            imgs[currentIndex].classList.add('active');
+            switchImage()
         }
         let timer = setInterval(slider,timeout);
         function resetTimer(){
@@ -136,12 +134,26 @@
             timer = setInterval(slider, timeout);
         }
         
+        //切換圖片
+        function switchImage(){
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
         // dots
         for(let i=0;i<total;i++){
             let dot = document.createElement('span');
             dot.classList.add('slider-dot');
             dot.dataset.idx = i;
             document.querySelector('.slider-dots').append(dot);
+        }
+        let dots = document.querySelectorAll('.slider-dot');
+        for(let dot of dots){
+            dot.onclick = function(){
+                currentIndex = this.dataset.idx;
+                console.log(currentIndex);
+                switchImage();
+                resetTimer();
+            }
         }
     </script>
 </body>
