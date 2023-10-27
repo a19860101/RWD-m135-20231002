@@ -161,7 +161,7 @@
         // 點擊dot切換
         for(let dot of dots){
             dot.onclick = function(){
-                currentIndex = this.dataset.idx;
+                currentIndex = Number(this.dataset.idx);
                 console.log(currentIndex);
                 switchImage();
                 resetTimer();
