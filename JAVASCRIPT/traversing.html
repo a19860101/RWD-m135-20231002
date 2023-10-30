@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit, cum est dolorem, vero atque placeat consequatur quo, laboriosam ratione labore nam dicta officiis incidunt quos amet? Maxime, iste doloremque?
+        </p>
+        <div class="container">
+            <ul>
+                <li class="list">list 1</li>
+                <li class="list">list 2</li>
+                <li class="list">list 3</li>
+                <li class="list">list 4</li>
+                <li class="list">list 5</li>
+            </ul>
+            <a href="#">link</a>
+        </div>
+    </section>
+    <script>
+        // 元素遍歷
+
+        
+        let el = document.querySelector('.container');
+
+        // 父元素
+        console.log(el.parentElement);
+        // 父節點
+        console.log(el.parentNode);
+
+        // 子元素
+        console.log(el.children);
+        // 子節點
+        console.log(el.childNodes);
+
+
+        //同輩元素
+        console.log(el.nextElementSibling);
+        console.log(el.previousElementSibling);
+
+        // 同輩節點
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+        /* 
+            節點
+            文字節點（文字、換行）
+            元素節點
+            註解節點
+        */
+    </script>
+</body>
+</html>
