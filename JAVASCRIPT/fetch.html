@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width:min(1200px,90%);
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex: 1 0 300px;
+            padding: 15px;
+        }
+
+        
+    </style>
 </head>
 <body>
     <div class="container">
@@ -36,13 +55,18 @@
                 let sbi = document.createElement('div');
                 sbi.classList.add('sbi');
                 sbi.append('剩餘車輛:'+d.sbi);
+                // if(d.sbi > 0){sbi.classList.add('active')}
+                // if(d.sbi > 0){sbi.style.color = 'blue'}else{sbi.style.color = 'red'}
+
 
                 let box = document.createElement('div');
                 box.classList.add('box');
                 box.append(sna,ar,sbi);
+                if(d.sbi > 0){box.style.backgroundColor = '#AEDEFC'}else{box.style.backgroundColor = '#FFDFDF'}
 
                 let el = document.querySelector('.container');
                 el.append(box);
+                
             }
         })
     </script>
