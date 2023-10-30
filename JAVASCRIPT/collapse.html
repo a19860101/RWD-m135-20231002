@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 600px;
+            margin-inline: auto;
+        }
+        .collapse-btn {
+            display: block;
+            text-decoration: none;
+            background-color: #ffd772;
+            color: #000;
+            padding: 15px;
+        }
+        .collapse-panel {
+            padding-inline: 15px;
+            padding-block: 0;
+            background-color: #fff383;
+            height: 0;
+            box-sizing: content-box;
+            overflow-y: hidden;
+        }
+        .collapse-panel.active {
+            padding-block: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">Panel 1</a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>Collapse Panel 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
