@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: 500ms;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgb( 0 0 0 / .8);
+        }
+        .modal-container {
+            width: min(800px, 90%);
+            height: fit-content;
+            background-color: #fff;
+            position: fixed; 
+            padding: 30px;
+            border-radius: 15px;
+            inset:0;
+            margin: auto;
+
+        }
+        .modal-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="modal-btn" data-modal="#modal-1">Modal 1</a>
+    <a href="#" class="modal-btn" data-modal="#modal-2">Modal 2</a>
+    <div class="modal" id="modal-1">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>modal 1</h3>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nemo, debitis vel quae eaque et ex? Quisquam tempore aliquid rerum. Impedit quidem optio cum placeat in modi consequuntur est ratione?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-2">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>modal 2</h3>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/id/92/800/600" alt="">
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let modalBtns = document.querySelectorAll('.modal-btn'); 
+        for(let modalBtn of modalBtns){
+            modalBtn.onclick = function(){
+                let modal = this.dataset.modal;
+                console.log(modal);
+                document.querySelector(modal).classList.add('active');
+            }
+        }
+        let modalClose = document.querySelectorAll('.modal-close');
+        for(let close of modalClose){
+            close.onclick = function(){
+                document.querySelector('.modal.active').classList.remove('active');
+            }
+        }
+    </script>
+</body> 
+</html>
