@@ -28,6 +28,7 @@
             height: 0;
             box-sizing: content-box;
             overflow-y: hidden;
+            transition: 500ms;
         }
         .collapse-panel.active {
             padding-block: 15px;
@@ -43,6 +44,34 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
             </p>
         </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Panel 2</a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>Collapse Panel 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+        </div>
     </section>
+    <script>
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(let btn of collapseBtns){
+            btn.onclick = function(){
+                let panel = this.nextElementSibling;
+                console.log(panel.scrollHeight);
+                panel.classList.toggle('active');
+                if(panel.style.height){
+                    panel.style.height= null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
