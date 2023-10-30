@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        
+    </div>
     <!-- 
         tot: 場站總停車格、sbi: 場站目前車輛數量、bemp: 空位數量、act: 全站禁用狀態(0:禁用、1:啟用)。
 
@@ -19,7 +22,28 @@
             return response.json();
         })
         .then(function(data){
-            console.log(data);
+            // console.log(data);
+            for(let d of data){
+                let sna = document.createElement('h2');
+                console.log(d)
+                sna.classList.add('sna');
+                sna.append(d.sna);
+
+                let ar = document.createElement('div');
+                ar.classList.add('ar');
+                ar.append(d.ar)
+
+                let sbi = document.createElement('div');
+                sbi.classList.add('sbi');
+                sbi.append('剩餘車輛:'+d.sbi);
+
+                let box = document.createElement('div');
+                box.classList.add('box');
+                box.append(sna,ar,sbi);
+
+                let el = document.querySelector('.container');
+                el.append(box);
+            }
         })
     </script>
 </body>
