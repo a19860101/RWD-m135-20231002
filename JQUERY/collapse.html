@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 600px;
+            margin-inline: auto;
+        }
+        .collapse-btn {
+            display: block;
+            text-decoration: none;
+            background-color: #ffd772;
+            color: #000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #dba210;
+            transition: 500ms;;
+        }
+        .collapse-btn.active {
+            background-color: #6ddff2;
+        }
+        .collapse-btn i {
+            transition: 500ms;
+        }
+        .collapse-btn.active i{
+            transform: rotate(180deg);
+        }
+        .collapse-panel {
+            padding: 15px;
+            background-color: #fff383;
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <a href="#" class="collapse-btn">
+            Panel 1
+            <i class="fa-solid fa-chevron-up fa-lg"></i>
+        </a>
+        <div class="collapse-panel">
+            <h2>Collapse Panel 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+        </div>
+        <a href="#" class="collapse-btn">
+            Panel 2
+            <i class="fa-solid fa-chevron-up fa-lg"></i>
+        </a>
+        <div class="collapse-panel">
+            <h2>Collapse Panel 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+        </div>
+        <a href="#" class="collapse-btn">
+            Panel 3
+            <i class="fa-solid fa-chevron-up fa-lg"></i>
+        </a>
+        <div class="collapse-panel" >
+            <h2>Collapse Panel 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <img src="https://picsum.photos/id/63/800/600" alt="">
+        </div>
+        <a href="#" class="collapse-btn">
+            Panel 4
+            <i class="fa-solid fa-chevron-up fa-lg"></i>
+        </a>
+        <div class="collapse-panel">
+            <h2>Collapse Panel 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            <img src="https://picsum.photos/id/68/800/600" alt="">
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero unde illo exercitationem sed quibusdam, suscipit temporibus. Est aut ipsa amet, provident debitis praesentium, doloribus quod quam atque suscipit repudiandae.
+            </p>
+            
+        </div>
+    </section>
+    <script>
+        $(function(){
+            $('.collapse-btn').click(function(){
+                $(this).toggleClass('active');
+                $(this).next().slideToggle(500);
+            })
+        })
+        // let collapseBtns = document.querySelectorAll('.collapse-btn');
+        // for(let btn of collapseBtns){
+        //     btn.onclick = function(){
+        //         this.classList.toggle('active');
+
+        //         let panel = this.nextElementSibling;
+        //         console.log(panel.scrollHeight);
+        //         panel.classList.toggle('active');
+        //         if(panel.style.maxHeight){
+        //             panel.style.maxHeight= null;
+        //         }else{
+        //             panel.style.maxHeight = panel.scrollHeight + 'px';
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>
