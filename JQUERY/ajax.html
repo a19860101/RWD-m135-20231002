@@ -14,6 +14,11 @@
             height: fit-content;padding: 30px;
             background-color: #ccc;
         }
+        #city {
+            width: 100%;
+            padding: 10px;
+            border-radius:5px;
+        }
     </style>
 
 </head>
@@ -31,31 +36,35 @@
     <script>
         $(function(){
             $('#city').change(function(){
+                let el = $('.weather-box');
+                el.empty();
                 let city = $(this).val();
                 console.log(city);
+
+                let url = 'https://api.openweathermap.org/data/2.5/weather';
+                $.ajax({
+                    url: url,
+                    data:{
+                        q:city,
+                        appid:'b1ecbccd638b763d489602917ba47cc3',
+                        units:'metric',
+                        lang:'zh_tw'
+                    },
+                    success:function(data){
+                        console.log(data);
+                        
+                        // el.append('<div class="desc">今日天氣:'+data.weather[0].description+'</div>');
+                        let desc = `<div class="desc">今日天氣${data.weather[0].description}</div>`;
+                        let feels_like = `<div class="feels">體感溫度${data.main.feels_like}&deg;C</div>`
+                        let temp = `<div class="feels">最高溫${data.main.temp_max}&deg;C最低溫${data.main.temp_min}&deg;C</div>`
+                        el.append(desc,feels_like,temp);
+                    },
+                    error:function(error){
+                        console.log(error.responseText)
+                    }
+                })
             })
-            let url = 'https://api.openweathermap.org/data/2.5/weather';
-            $.ajax({
-                url: url,
-                data:{
-                    q:'taipei',
-                    appid:'b1ecbccd638b763d489602917ba47cc3',
-                    units:'metric',
-                    lang:'zh_tw'
-                },
-                success:function(data){
-                    console.log(data);
-                    let el = $('.weather-box');
-                    // el.append('<div class="desc">今日天氣:'+data.weather[0].description+'</div>');
-                    let desc = `<div class="desc">今日天氣${data.weather[0].description}</div>`;
-                    let feels_like = `<div class="feels">體感溫度${data.main.feels_like}&deg;C</div>`
-                    let temp = `<div class="feels">最高溫${data.main.temp_max}&deg;C最低溫${data.main.temp_min}&deg;C</div>`
-                    el.append(desc,feels_like,temp);
-                },
-                error:function(error){
-                    console.log(error.responseText)
-                }
-            })
+            
         })
     </script>
 </body>
