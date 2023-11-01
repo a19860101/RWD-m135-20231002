@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        .weather-box {
+        .box {
             position: fixed;
             inset:0;
             margin: auto;
@@ -18,10 +18,22 @@
 
 </head>
 <body>
-    <div class="weather-box">
+    <div class="box">
+        <select name="" id="city">
+            <option>--請選擇城市--</option>
+            <option value="taipei">台北</option>
+            <option value="tokyo">東京</option>
+            <option value="seoul">首爾</option>
+            <option value="bangkok">曼谷</option>
+        </select>
+        <div class="weather-box"></div>
     </div>
     <script>
         $(function(){
+            $('#city').change(function(){
+                let city = $(this).val();
+                console.log(city);
+            })
             let url = 'https://api.openweathermap.org/data/2.5/weather';
             $.ajax({
                 url: url,
