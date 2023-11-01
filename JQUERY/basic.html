@@ -6,13 +6,40 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
+        h1 {
+            transition: 500ms;
+        }
         .active {
             color: red;
             background-color: blue;
+            padding: 30px;
         }
     </style>
+    <script>
+        // window.onload = function(){
+        //     $('h1').addClass('active');
+        // }
+        // $(document).ready(function(){
+        //     $('h1').addClass('active');
+        // });
+        $(function(){
+            $('.add').click(function(){
+                $('h1').addClass('active');
+            });
+            $('.remove').click(function(){
+                $('h1').removeClass('active');
+            });
+            $('.toggle').click(function(){
+                $('h1').toggleClass('active');
+            });
+        })
+
+    </script>
 </head>
 <body>
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
     <h1>hello jQuery</h1>
     <script>
         // $('h1').css('color','red');
@@ -25,7 +52,7 @@
         //     backgroundColor:'blue',
         //     padding:'15px'
         // });
-        $('h1').addClass('active');
+        // $('h1').addClass('active');
     </script>
 </body>
 </html>
