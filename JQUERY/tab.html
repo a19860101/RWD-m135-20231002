@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .tab-nav {
+            background-color: #8ECDDD;
+            display: flex;
+            gap: 10px
+        }
+
+        .tab-link {
+            text-decoration: none;
+            color: #22668D;
+            padding: 8px 20px;
+        }
+        .tab-link.active {
+            background-color: #FFFADD;
+        }
+        .tab-panel {
+            padding: 15px;
+            background-color: #FFFADD;
+            position: absolute;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" data-target="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#" data-target="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#" data-target="#tab-3" class="tab-link">Tab 3</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>Tab 1</h2>
+            <p>
+                有時眼光感情法規總統石油簡介審核從來沒，照顧次數聯繫方式，財務公里現有獲得漫畫排行榜你們的女性討論區，男人而來精選一對，許可自身事故健康特色一名大量，常見關於面議今年觀念步驟自從能源於是德國，加入動漫原文基金大聲你可以，判斷從此財務確定面前支撐聲明沒有作。
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>Tab 2</h2>
+            <p>
+                之處軟體其中由此的確暫時未經共有先後多個親自邀請一路允許，取得開發提前下降外面演出事件轉變施工鏡頭更加上傳加強溫柔，怎麼會落實要是說著始終食物監管道德情感，增。
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>Tab 3</h2>
+            <p>
+                考察參數申請盯着負責人體屬性上網保健溫州強烈同樣小心進行，將在規則背景引導總部告訴我再說更多英語國語綠色，會有接收，每年時候可憐糖尿病眼裡感興趣裝飾哈哈，臨時思考明天命令服飾歐洲青年你有回來據說都能，周圍一下之一祝福指導全新就是面前，老闆改變神秘看見天使，連載導航高度，一張特性陽明山當中線路醫生有。
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.tab-link').click(function(){
+                $('.tab-link.active').removeClass('active');
+                $(this).addClass('active');
+                let panel = $(this).data('target');
+                $('.tab-panel').fadeOut();
+                $(panel).fadeIn();
+            })
+        })
+        // let tabLinks = document.querySelectorAll('.tab-link');
+
+        // for(let tabLink of tabLinks){
+        //     tabLink.onclick = function(){
+        //         // let panel = this.getAttribute('href');
+        //         let panel = this.dataset.target;
+        //         console.log(panel);
+        //         document.querySelector('.tab-panel.active').classList.remove('active');
+        //         document.querySelector(panel).classList.add('active');
+
+        //         document.querySelector('.tab-link.active').classList.remove('active');
+        //         this.classList.add('active');
+        //     }
+        // }
+    </script>
+</body>
+</html>
