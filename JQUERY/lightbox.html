@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <style>
+        .container {
+            display: flex;
+            width:min(1200px,90%);
+            margin-inline: auto;
+            flex-wrap: wrap;
+        }
+        .col {
+            flex: 1 0 300px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <a href="https://picsum.photos/id/34/800/600" data-lightbox="g">
+                <img src="https://picsum.photos/id/34/800/600" alt="">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://picsum.photos/id/23/800/600" data-lightbox="g">
+                <img src="https://picsum.photos/id/23/800/600" alt="">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://picsum.photos/id/54/800/600" data-lightbox="g2">
+                <img src="https://picsum.photos/id/54/800/600" alt="">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://picsum.photos/id/67/800/600" data-lightbox="g2">
+                <img src="https://picsum.photos/id/67/800/600" alt="">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
