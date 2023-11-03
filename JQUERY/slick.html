@@ -49,6 +49,9 @@
         .product-item {
             margin-inline:5px;
         }
+        .slick-next:before, .slick-prev:before {
+            color: #222;
+        }
     </style>
 </head>
 <body>
@@ -165,13 +168,45 @@
                 arrows: true,
                 centerMode: true,
                 centerPadding: '100px',
-                fade: true
+                fade: true,
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            arrows: false,
+                        }
+                    }
+                ]
             });
             $('.product').slick({
                 slidesToShow: 5,
                 dots: true,
                 centerMode: true,
-                centerPadding: '100px'
+                centerPadding: '100px',
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 4,
+                            arrows: false,
+                            centerMode: false,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: false,
+                            
+                        }
+                    }
+                ]
             })
         })
     </script>
