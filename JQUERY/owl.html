@@ -14,9 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            background-color: #6ddaf6;
-        }
         .slider {
             max-width: 1200px;
             margin-inline: auto;
@@ -45,9 +42,6 @@
         .product {
             max-width: 1200px;
             margin-inline: auto;
-        }
-        .product-item {
-            margin-inline:5px;
         }
 
     </style>
@@ -157,7 +151,18 @@
         </div>
     </section>
     <script>
-            
+        $(function(){
+            $('.slider').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                nav: true,
+                dots: true
+            });
+            $('.product').owlCarousel({
+                items: 5
+            })
+        })
     </script>
 </body>
 </html>
