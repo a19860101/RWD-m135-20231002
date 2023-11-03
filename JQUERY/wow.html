@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         nav {
             width: 100%;
             position: fixed;
@@ -23,9 +28,11 @@
             align-items: center;
             gap: 30px;
         }
+
         nav a {
             color: #fff;
         }
+
         header {
             background-image: url('https://picsum.photos/id/46/1600/900');
             background-size: cover;
@@ -34,18 +41,23 @@
             background-position: center;
             height: 100vh;
         }
+
         section {
             width: 100%;
         }
-        section:nth-of-type(1){
+
+        section:nth-of-type(1) {
             background-color: #ff8585;
         }
-        section:nth-of-type(2){
+
+        section:nth-of-type(2) {
             background-color: #88f3ff;
         }
-        section:nth-of-type(3){
+
+        section:nth-of-type(3) {
             background-color: #acff9d;
         }
+
         .container {
             width: min(1200px, 90%);
             height: 100vh;
@@ -55,15 +67,18 @@
             margin-inline: auto;
             align-items: center;
         }
+
         .col {
-            flex:1 0 0;
+            flex: 1 0 0;
 
         }
+
         img {
             width: 100%;
         }
     </style>
 </head>
+
 <body>
     <nav>
         <a href="#">Home</a>
@@ -75,46 +90,56 @@
     </header>
     <section id="first">
         <div class="container">
-            <div class="col">
+            <div class="col wow fadeIn" data-wow-delay="0.2s">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
-            <div class="col">
+            <div class="col wow fadeIn" data-wow-delay="0.7s">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
-            <div class="col">
+            <div class="col wow fadeIn" data-wow-delay="1.2s">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
         </div>
     </section>
     <section id="second">
         <div class="container">
-            <div class="col">
+            <div class="col wow fadeInLeft" data-wow-delay="0.2s">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam iste amet sunt debitis corporis itaque tempora delectus odit. Repudiandae cupiditate, soluta provident dicta amet qui alias?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam
+                    iste amet sunt debitis corporis itaque tempora delectus odit. Repudiandae cupiditate, soluta
+                    provident dicta amet qui alias?
                 </p>
             </div>
-            <div class="col">
+            <div class="col wow fadeInRight" data-wow-delay="0.7s">
                 <img src="https://picsum.photos/id/92/800" alt="">
             </div>
-            </div>
-            <div class="container">
-            <div class="col">
+        </div>
+        <div class="container">
+            <div class="col wow fadeInLeft" data-wow-delay="0.2s">
                 <img src="https://picsum.photos/id/92/800" alt="">
             </div>
-            <div class="col">
+            <div class="col wow fadeInRight" data-wow-delay="0.7s">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam iste amet sunt debitis corporis itaque tempora delectus odit. Repudiandae cupiditate, soluta provident dicta amet qui alias?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam
+                    iste amet sunt debitis corporis itaque tempora delectus odit. Repudiandae cupiditate, soluta
+                    provident dicta amet qui alias?
                 </p>
             </div>
         </div>
@@ -124,25 +149,33 @@
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis doloremque provident reiciendis et ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias vitae perferendis aliquid culpa
+                    quae, nam delectus. Doloremque, tempore. Nulla perspiciatis id aperiam possimus maxime corporis
+                    doloremque provident reiciendis et ducimus?
                 </p>
             </div>
         </div>
@@ -152,10 +185,17 @@
             <div class="col">
                 <h2>Contact</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum laborum necessitatibus rerum temporibus ducimus, ipsum hic repellendus eaque soluta aperiam voluptate perferendis maiores tempore quaerat blanditiis error quisquam incidunt totam.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum laborum necessitatibus rerum
+                    temporibus ducimus, ipsum hic repellendus eaque soluta aperiam voluptate perferendis maiores tempore
+                    quaerat blanditiis error quisquam incidunt totam.
                 </p>
             </div>
-        </div>            
+        </div>
     </footer>
+    <script>
+        new WOW().init();
+
+    </script>
 </body>
+
 </html>
