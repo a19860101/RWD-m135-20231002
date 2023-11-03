@@ -18,7 +18,7 @@
             background-color: #6ddaf6;
         }
         .slider {
-            width: 1200px;
+            max-width: 1200px;
             margin-inline: auto;
         }
         img {
@@ -43,7 +43,7 @@
             font-size: 4rem;
         }
         .product {
-            width: 1200px;
+            max-width: 1200px;
             margin-inline: auto;
         }
         .product-item {
@@ -162,11 +162,16 @@
                 autoplaySpeed: 6000,
                 speed: 1000,
                 dots: true,
-                arrows: true
+                arrows: true,
+                centerMode: true,
+                centerPadding: '100px',
+                fade: true
             });
             $('.product').slick({
                 slidesToShow: 5,
-                dots: true
+                dots: true,
+                centerMode: true,
+                centerPadding: '100px'
             })
         })
     </script>
