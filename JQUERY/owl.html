@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <style>
         * {
             margin: 0;
@@ -36,7 +37,7 @@
             margin: auto;
             text-align: center;
             backdrop-filter: blur(5px);
-        }
+            }
         h3 {
             font-size: 4rem;
         }
@@ -50,6 +51,15 @@
         .owl-theme .owl-nav [class*=owl-]:hover {
             background: initial;
             color: #4DC7A0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+            position: absolute;
+            inset:0;
+            margin: auto;
+            z-index: 999;
         }
     </style>
 </head>
@@ -156,6 +166,7 @@
                 </a>
             </div>
         </div>
+        <div class="box animated fadeIn"></div>
     </section>
     <script>
         $(function(){
