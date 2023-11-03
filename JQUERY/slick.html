@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         .slider {
             width: 1200px;
             margin-inline: auto;
@@ -16,27 +21,82 @@
         img {
             width: 100%;
         }
+        .slider-item {
+            position: relative;
+        }
+        .slider-caption {
+            background-color: rgb(255 255 255 / .2);
+            /* width: 100%; */
+            width: fit-content;
+            height: fit-content;
+            padding: 30px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        h3 {
+            font-size: 4rem;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="slider">
             <div class="slider-item">
-                <img src="https://picsum.photos/id/97/1200/600" alt="">
+                <img src="https://picsum.photos/id/87/1200/600" alt="">
+                <div class="slider-caption">
+                    <h3>001</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, libero?
+                    </p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/17/1200/600" alt="">
+                <div class="slider-caption">
+                    <h3>002</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, libero?
+                    </p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/27/1200/600" alt="">
+                <div class="slider-caption">
+                    <h3>003</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, libero?
+                    </p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/37/1200/600" alt="">
+                <div class="slider-caption">
+                    <h3>004</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, libero?
+                    </p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="https://picsum.photos/id/47/1200/600" alt="">
+                <div class="slider-caption">
+                    <h3>005</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, libero?
+                    </p>
+                </div>
             </div>
         </div>
     </header>
+    <script>
+        $(function(){
+            $('.slider').slick({
+                autoplay: true
+            });
+        })
+    </script>
 </body>
 </html>
