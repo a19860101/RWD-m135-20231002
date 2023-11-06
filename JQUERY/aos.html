@@ -28,6 +28,7 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
+            z-index: 100;
         }
 
         nav a {
@@ -120,7 +121,7 @@
     </section>
     <section id="second">
         <div class="container">
-            <div class="col">
+            <div class="col" data-aos-anchor-placement="top-bottom" data-aos-offset="100" data-aos="fade-right">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam
@@ -128,15 +129,15 @@
                     provident dicta amet qui alias?
                 </p>
             </div>
-            <div class="col">
+            <div class="col" data-aos-anchor-placement="top-bottom" data-aos-offset="100" data-aos="fade-left">
                 <img src="https://picsum.photos/id/92/800" alt="">
             </div>
         </div>
         <div class="container">
-            <div class="col">
+            <div class="col" data-aos="slide-up">
                 <img src="https://picsum.photos/id/92/800" alt="">
             </div>
-            <div class="col">
+            <div class="col" data-aos="slide-up">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, omnis nulla? Tenetur ipsam
@@ -195,7 +196,10 @@
         </div>
     </footer>
     <script>
-        AOS.init();
+        AOS.init({
+            delay: 300,
+            duration:1500
+        });
     </script>
 </body>
 
