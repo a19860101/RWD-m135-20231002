@@ -20,7 +20,8 @@
 
 <body>
     <!-- Alt + Shift + F 整理標籤 -->
-    <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top" data-bs-theme="dark" 
+            style="--bs-bg-opacity: .6; backdrop-filter: blur(5px)">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">LOGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -56,7 +57,7 @@
             </div>
         </div>
     </nav>
-    <header class="py-5 bg-secondary-subtle">
+    <header class="bg-secondary-subtle pb-5" style="padding-top: 100px;">
         <div class="container">
             <div class="row align-items-center gy-lg-0 gy-4">
                 <div class="col-lg-6 col-12 text-lg-start text-center order-2 order-lg-1">
@@ -320,6 +321,13 @@
             </div>
         </div>
     </section>
+    <!-- <footer class="text-center bg-dark text-white py-3">
+        Copyrights &copy; 2023. All Rights Reserved
+    </footer> -->
+    <footer class="bg-dark text-white py-3 d-flex justify-content-between px-3">
+        <div>Copyrights &copy; 2023. All Rights Reserved</div>
+        <div>Design By FGH.</div>
+    </footer>
 </body>
 
 </html>
