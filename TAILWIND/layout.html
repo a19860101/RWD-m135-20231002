@@ -6,16 +6,20 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <style type="text/tailwindcss">
+        .nav-link {
+            @apply hover:text-zinc-100 hover:bg-zinc-800 px-6 py-2 rounded-lg duration-300;
+        }
+    </style>
 </head>
 <body>
     <nav class="bg-amber-300/30 flex h-16 px-3 items-center fixed w-full z-50 backdrop-blur-sm">
         <a href="#">LOGO</a>
         <div class="ml-auto flex">
-            <a href="#" class="hover:text-zinc-100 hover:bg-zinc-800 px-6 py-2 rounded-lg duration-300">Home</a>
-            <a href="#about" class="hover:text-zinc-100 hover:bg-zinc-800 px-6 py-2 rounded-lg duration-300">About</a>
-            <a href="#service" class="hover:text-zinc-100 hover:bg-zinc-800 px-6 py-2 rounded-lg duration-300">Service</a>
-            <a href="#contact" class="hover:text-zinc-100 hover:bg-zinc-800 px-6 py-2 rounded-lg duration-300">Contact</a>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#service" class="nav-link">Service</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
     <header class="relative max-h-[600px] sm:aspect-[16/10] aspect-[4/3] w-full">
