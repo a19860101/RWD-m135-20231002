@@ -10,5 +10,5 @@
     @apply hover:text-rose-500 duration-500
 }
 .btn {
-    @apply inline-block px-6 py-2 bg-amber-300 hover:bg-sky-300 duration-500 rounded
+    @apply inline-block px-6 py-2 bg-cyan-800 hover:bg-cyan-600 text-cyan-50 duration-500 rounded-full
 }
