@@ -685,6 +685,10 @@ video {
   width: 91.666667%;
 }
 
+.flex-col{
+  flex-direction: column;
+}
+
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -846,6 +850,14 @@ video {
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-24{
+  padding: 6rem;
+}
+
+.p-20{
+  padding: 5rem;
 }
 
 .px-5{
@@ -1112,6 +1124,14 @@ video {
 }
 
 @media (min-width: 768px){
+  .md\:block{
+    display: block;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
   .md\:h-\[400px\]{
     height: 400px;
   }
