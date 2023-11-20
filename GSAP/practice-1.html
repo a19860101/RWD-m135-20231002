@@ -29,9 +29,24 @@
         img {
             width: 100%;
         }
+        .start {
+            display: inline-block;
+            padding: 8px 30px;
+            width: fit-content;
+            height: fit-content;
+            background-color: #fa0;
+            position: absolute;
+            inset:0;
+            margin: auto;
+            color: #000;
+            text-decoration: none;
+            border-radius: 100px;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
+    <a href="#" class="start">START</a>
     <div class="container">
         <div class="col">
             <img src="https://picsum.photos/id/67/600" alt="">
@@ -41,16 +56,31 @@
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rerum, quae nostrum sed minus fugit ipsa fugiat! Incidunt, ad perferendis.
             </p>
-            <a href="#">Link</a>
+            <a href="#" class="next">Next</a>
         </div>
     </div>
     <script>
-        gsap.timeline()
-        .from('.container',{opacity:0,y:100,delay:1,duration:1})
-        .from('img',{opacity:0,duration:0.3})
-        .from('h2',{opacity:0,duration:0.3})
-        .from('p',{opacity:0,duration:0.3})
-        .from('a',{opacity:0,duration:0.3})
+        
+        let animation = gsap.timeline()
+        .to('.start',{opacity:0,y:100,duration:0.5})
+        .from('.container',{opacity:0,y:100,duration:1})
+        .from('img',{opacity:0,duration:0.6})
+        .from('h2',{opacity:0,duration:0.6})
+        .from('p',{opacity:0,duration:0.6})
+        .from('.next',{opacity:0,duration:0.6})
+
+        let animation2 = gsap.timeline()
+        .to('.container',{x:600,opacity:0,duration:1.5});
+        animation.pause();
+        animation2.pause();
+        document.querySelector('.start').onclick = function(){
+            console.log('start')
+            animation.play();
+        }
+        document.querySelector('.next').onclick = function(){
+            console.log('next')
+            animation2.play();
+        }
     </script>
 </body>
 </html>
