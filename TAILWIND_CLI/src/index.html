@@ -349,9 +349,11 @@
         let open = document.querySelector('.open');
         let close = document.querySelector('.close');
         open.onclick = function(){
+            this.classList.add('active');
             document.querySelector('.mobile-nav').classList.add('active');
         }
         close.onclick = function(){
+            open.classList.remove('active');
             document.querySelector('.mobile-nav').classList.remove('active');
         }
 

@@ -16,8 +16,16 @@
     @apply inline-block px-6 py-2 bg-cyan-800 hover:bg-cyan-600 text-cyan-50 duration-500 rounded-full
 }
 .mobile-nav {
-    @apply hidden
+    /* @apply hidden */
+    @apply invisible opacity-0 duration-500
 }
 .mobile-nav.active {
-    @apply block
+    /* @apply block */
+    @apply visible opacity-100
+}
+.open {
+    @apply visible opacity-100  duration-500
+}
+.open.active {
+    @apply invisible opacity-0
 }

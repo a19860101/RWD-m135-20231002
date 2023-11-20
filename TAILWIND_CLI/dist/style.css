@@ -552,20 +552,12 @@ video {
   inset: 0px;
 }
 
-.right-\[50px\]{
-  right: 50px;
+.right-\[20px\]{
+  right: 20px;
 }
 
 .top-\[50px\]{
   top: 50px;
-}
-
-.right-\[30px\]{
-  right: 30px;
-}
-
-.right-\[20px\]{
-  right: 20px;
 }
 
 .z-10{
@@ -976,12 +968,28 @@ video {
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
 }
 
-.mobile-nav{
-  display: none;
+.mobile-nav {
+  /* @apply hidden */
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 500ms
 }
 
-.mobile-nav.active{
-  display: block;
+.mobile-nav.active {
+  /* @apply block */
+  visibility: visible;
+  opacity: 1
+}
+
+.open{
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 500ms;
+}
+
+.open.active{
+  visibility: hidden;
+  opacity: 0;
 }
 
 @media (min-width: 640px){
