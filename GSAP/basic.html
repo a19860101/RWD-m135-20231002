@@ -18,20 +18,30 @@
     <div class="box"></div>
     <div class="box"></div>
     <script>
-        // gsap.to('.box',{
-        //     scale:0,
-        //     opacity:0,
-        //     delay:1,
-        //     duration:1,
-        // });
-        gsap.from('.box',{
+        gsap.to('.box',{
+            x:500,
+            delay:1,
+            repeat:-1,
+            yoyo:true,
+            duration:1,
+        });
+        // gsap.from('.box',{
             // opacity:0,
             // scale:0,
             // rotation:180,
-            backgroundColor:'#098',
-            delay:1,
-            duration:1,
-        })
+            // backgroundColor:'#098',
+            // delay:1,
+            // duration:1,
+        // })
+        // gsap.fromTo('.box',{
+        //     x:-200,
+        //     opacity:0,
+        // },{
+        //     x:200,
+        //     opacity:1,
+        //     delay:1,
+        //     duration:1
+        // })
     </script>
 </body>
 </html>
