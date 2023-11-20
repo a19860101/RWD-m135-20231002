@@ -17,11 +17,13 @@
 }
 .mobile-nav {
     /* @apply hidden */
-    @apply invisible opacity-0 duration-500
+    /* @apply invisible opacity-0 duration-500 */
+    @apply translate-x-full opacity-0 duration-500
 }
 .mobile-nav.active {
     /* @apply block */
-    @apply visible opacity-100
+    /* @apply visible opacity-100 */
+    @apply translate-x-0 opacity-100
 }
 .open {
     @apply visible opacity-100  duration-500

@@ -970,14 +970,18 @@ video {
 
 .mobile-nav {
   /* @apply hidden */
-  visibility: hidden;
+  /* @apply invisible opacity-0 duration-500 */
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
   transition-duration: 500ms
 }
 
 .mobile-nav.active {
   /* @apply block */
-  visibility: visible;
+  /* @apply visible opacity-100 */
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 1
 }
 
