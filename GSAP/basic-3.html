@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="play">Play</a>
+    <a href="#" class="pause">Pause</a>
+    <a href="#" class="reverse">Reverse</a>
+    <a href="#" class="restart">restart</a>
+    <a href="#" class="resume">Resume</a>
+    <div class="box"></div>
+    <script>
+        let animation = gsap.timeline().to('.box',{x:500,duration:3});
+        animation.pause();
+        document.querySelector('.play').onclick = function(){
+            animation.play();
+        }
+        document.querySelector('.pause').onclick = function(){
+            animation.pause();
+        }
+        document.querySelector('.reverse').onclick = function(){
+            animation.reverse();
+        }
+        document.querySelector('.restart').onclick = function(){
+            animation.restart();
+        }
+        document.querySelector('.resume').onclick = function(){
+            animation.resume();
+        }
+    </script>
+</body>
+</html>
