@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: min(70%, 1000px);
+            height: fit-content;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            inset:0;
+            margin: auto;
+            background-color: #ccc;
+            border-radius: 15px;
+        }
+        .col {
+            width: 50%;
+            padding: 15px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <img src="https://picsum.photos/id/67/600" alt="">
+        </div>
+        <div class="col">
+            <h2>TITLE</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rerum, quae nostrum sed minus fugit ipsa fugiat! Incidunt, ad perferendis.
+            </p>
+            <a href="#">Link</a>
+        </div>
+    </div>
+    <script>
+        gsap.timeline()
+        .from('.container',{opacity:0,y:100,delay:1,duration:1})
+        .from('img',{opacity:0,duration:0.3})
+        .from('h2',{opacity:0,duration:0.3})
+        .from('p',{opacity:0,duration:0.3})
+        .from('a',{opacity:0,duration:0.3})
+    </script>
+</body>
+</html>
