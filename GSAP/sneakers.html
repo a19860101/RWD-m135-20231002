@@ -29,6 +29,9 @@
             height: fit-content;  
             inset:0;
             margin: auto;
+            /* -webkit-text-stroke: #fff 15px; */
+            text-shadow: 3px 3px 0px #fff;
+            color: #ff7301;
         }
         #first {
             width: 100%;
@@ -113,10 +116,18 @@
             height: 100vh;
             background-color: #888;
         }
+        header .right {
+            position: absolute;
+            width: 600px;
+            right: 10%;
+            bottom: 10%;
+            z-index: 3;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="images/right.png" alt="" class="right">
         <h1>PARALLAX</h1>
     </header>
     <section id="first">
@@ -135,6 +146,17 @@
     <script>
         gsap.timeline({
             scrollTrigger:{
+                trigger:'header',
+                markers:true,
+                scrub:1,
+                start:'top',
+                // end:'+=80%'
+            }
+        })
+        .to('h1',{scale:0,y:200,opacity:0})
+        .to('header .right',{rotate:90,x:-600,opacity:0},0)
+        gsap.timeline({
+            scrollTrigger:{
                 trigger:'#first',
                 // markers:true,
                 scrub:1,
@@ -148,7 +170,7 @@
         gsap.timeline({
             scrollTrigger:{
                 trigger:'#second',
-                markers:true,
+                // markers:true,
                 scrub:1,
                 start:'top 50%',
                 end:'+=100%'
