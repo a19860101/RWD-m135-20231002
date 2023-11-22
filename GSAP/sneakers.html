@@ -151,12 +151,15 @@
                 markers:true,
                 scrub:1,
                 start:'top 50%',
-                end:'+=50%'
+                end:'+=100%'
             }
         })
         .from('#second .right',{x:600,rotate:15,opacity:0})
-        .from('#second .left',{x:-600,rotate:-15,opacity:0},0.3)
-        .from('#second h2',{scale:0,opacity:0},0.6)
-    </script>
+        .from('#second .left',{x:-600,rotate:-15,opacity:0},1)
+        .from('#second h2',{scale:0,opacity:0},2)
+        .to('#second .right',{x:-600,opacity:0},3)
+        .to('#second .left',{x:600,opacity:0},4)
+        .to('#second h2',{scale:10,y:300,opacity:0},5)
+        </script>
 </body>
 </html>
