@@ -123,9 +123,19 @@
             bottom: 10%;
             z-index: 3;
         }
+        .loading {
+            position: fixed;
+            width: 0%;
+            height: 5px;
+            background-color: #f7823f;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
+    <div class="loading"></div>
     <header>
         <img src="images/right.png" alt="" class="right">
         <h1>PARALLAX</h1>
@@ -147,7 +157,18 @@
         gsap.timeline({
             scrollTrigger:{
                 trigger:'header',
-                markers:true,
+                endTrigger:'footer',
+                // markers:true,
+                scrub:1,
+                start:'top top',
+                end:'top top'
+            }
+        })
+        .to('.loading',{width: '100%'})
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'header',
+                // markers:true,
                 scrub:1,
                 start:'top',
                 // end:'+=80%'
