@@ -12,6 +12,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        body {
+            overflow-x: hidden;
+        }
         header {
             width: 100%;
             height: 100vh;
@@ -65,6 +68,46 @@
                 -5px -5px 0px #ffffff;
                 
         }
+        
+        #second {
+            width: 100%;
+            height: 100vh;
+            
+            background-color: #97c8af;
+        }
+        #second .container {
+            width: min(1200px, 90%);
+            position: relative;
+            height: 100vh;
+            margin-inline: auto;
+        }
+        #second img {
+            position: absolute;
+            width: 600px;
+        }
+        #second .left {
+            top: 30%;
+            left: 10%;
+            transform: rotate(45deg);
+        }
+        #second .right {
+            top: 20%;
+            right: 10%;
+        }
+        #second h2 
+        {
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            inset:0;
+            margin: auto;
+            font-size: 6rem;
+            z-index: 7;
+            color: #ff7301;
+            text-shadow: 
+                5px 5px 0px #009362,
+                -5px -5px 0px #ffffff;
+        }
         footer {
             width: 100%;
             height: 100vh;
@@ -81,12 +124,19 @@
         <img src="images/right.png" alt="" class="right">
         <h2>SNEAKERS</h2>
     </section>
+    <section id="second">
+        <div class="container">
+            <img src="images/left.png" alt="" class="left">
+            <img src="images/right.png" alt="" class="right">
+            <h2>SNEAKERS</h2>
+        </div>
+    </section>
     <footer></footer>
     <script>
         gsap.timeline({
             scrollTrigger:{
                 trigger:'#first',
-                markers:true,
+                // markers:true,
                 scrub:1,
                 start:'top 80%',
                 end:'+=80%'
@@ -95,6 +145,18 @@
         .from('#first .right',{y:-300,rotate:-30})
         .from('#first .left',{y:300,rotate:30},0)
         .from('#first h2',{x:-400,opacity:0},0)
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'#second',
+                markers:true,
+                scrub:1,
+                start:'top 50%',
+                end:'+=50%'
+            }
+        })
+        .from('#second .right',{x:600,rotate:15,opacity:0})
+        .from('#second .left',{x:-600,rotate:-15,opacity:0},0.3)
+        .from('#second h2',{scale:0,opacity:0},0.6)
     </script>
 </body>
 </html>
